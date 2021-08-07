@@ -1,7 +1,7 @@
 # Rest Api Imobiliária Node.js
 
-<div style="text-align: center">
-    <img style="width: 20%" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"/>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"  width="300em"/>
 </div>
 
 
@@ -37,10 +37,3 @@ yarn dev OR npm run dev
 ```` bash
 yarn start OR npm run start
 ````
-
-##
-
-
-
-
-
