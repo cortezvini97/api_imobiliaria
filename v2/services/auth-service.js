@@ -29,5 +29,16 @@ module.exports = {
                }
            });
         }
+    },
+    decodeToken:  (token)=>
+    {
+        token = base64.decode(token);
+        try 
+        {
+            var decoded = jwt.verify(token, SECRET);
+        }catch(err) {
+            return err;
+        }
+        return decoded;
     }
 }

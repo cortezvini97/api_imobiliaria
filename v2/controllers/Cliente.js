@@ -13,7 +13,7 @@ module.exports = {
     },
     login: async(req, res)=>
     {
-        await Clientes.clientes.findAll({where: {empresa: req.body.empresa}}).then((user)=>{
+        await Clientes.clientes.findAll({where: {empresa: req.body.empresa}, attributes: {exclude: ['createdAt','updatedAt']}}).then((user)=>{
 
             if(user.length > 0)
             {
