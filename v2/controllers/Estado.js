@@ -11,9 +11,9 @@ module.exports = {
 
         await Estados.estados.findAll({where: {id_user: data.id}, attributes: {exclude: ['createdAt','updatedAt']}}).then((estados)=>
         {
-            res.json(estados)
+            res.status(200).json(estados)
         }).catch((error)=>{
-
+            res.status(500).json(error)
         })
 
     }

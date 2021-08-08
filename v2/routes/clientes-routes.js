@@ -5,7 +5,7 @@ const clientesRoutes = express.Router();
 
 
 
-clientesRoutes.get('/', auth.authorize ,controller.listAll);
+//clientesRoutes.get('/', auth.authorize ,controller.listAll);
 
 clientesRoutes.post('/login',controller.login);
 

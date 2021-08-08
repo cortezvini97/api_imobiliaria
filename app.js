@@ -21,10 +21,15 @@ let corsOptions = {
 }
 
 
+
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(routes);
+
+app.get('/', (req, res)=>{
+    res.redirect('https://vcinsidedigital.com.br');
+})
+app.use("/v2",routes);
 
 server.listen(serverport, ()=>{
     console.log(`Serividot inicializado na porta ${serverport}`)

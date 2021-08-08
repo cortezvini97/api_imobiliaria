@@ -10,7 +10,7 @@ const Cidades = db.sequelize.define('imobiliaria_cidades', {
         allowNull: false
     },
     cidade: {
-        type: db.DataTypes.STRING(60),
+        type: db.DataTypes.STRING(80),
         allowNull: false
     },
     cep: {

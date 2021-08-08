@@ -3,14 +3,14 @@ const auth = require('../services/auth-service.js');
 var bcryptjs = require('bcryptjs');
 
 module.exports = {
-    listAll: async (req, res)=>
+    /*listAll: async (req, res)=>
     {
         await Clientes.clientes.findAll({attributes: {exclude: ['senha', 'api_key', 'chave', 'palavra_secreta', 'login', 'createdAt', 'updatedAt', 'cnpj']}}).then((clientes)=>{
             res.status(200).json(clientes);
         }).catch((error)=>{
-            res.json(error);
+            res.status(500).json(error);
         })
-    },
+    },*/
     login: async(req, res)=>
     {
         await Clientes.clientes.findAll({where: {empresa: req.body.empresa}, attributes: {exclude: ['createdAt','updatedAt']}}).then((user)=>{
@@ -44,7 +44,7 @@ module.exports = {
             }
 
         }).catch((error)=>{
-            console.log(error)
+            res.status(500).json(error)
         });
         
         

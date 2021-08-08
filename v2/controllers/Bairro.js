@@ -17,7 +17,7 @@ module.exports = {
         }}).then((bairros)=>{
             res.status(201).json(bairros)
         }).catch((error)=>{
-            res.json(error)
+            res.status(500).json(error)
         });
     }
 }

@@ -17,6 +17,6 @@ module.exports = {
             'createdAt', 'updatedAt'
         ]}}).then((cidades)=>{
             res.status(200).json(cidades)
-        }).catch((error)=>res.json(error));
+        }).catch((error)=>res.status(500).json(error));
     }
 }

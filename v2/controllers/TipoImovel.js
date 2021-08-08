@@ -16,7 +16,7 @@ module.exports = {
             res.status(200).json(tipo_imoveis)
         }).catch((error)=>{
 
-            res.json(error)
+            res.status(500).json(error)
         });
     }
 }
